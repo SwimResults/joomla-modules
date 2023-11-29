@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>SwimResultsFileList</name>
+	<author>Konrad Weiß</author>
+	<creationDate>29.11.2023</creationDate>
+	<copyright>Copyright (C) 2005 - 2023 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+	<authorEmail>konrad@swimresults.de</authorEmail>
+	<authorUrl>swimresults.de</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[This modules displays the file list for a given meeting. Meeting id and language can be set in the modules settings.]]></description>
+	<files>
+		<filename module="mod_sr_files">mod_sr_files.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="meeting"
+					type="text"
+					label="Meeting ID"
+					description="SwimResults Meeting ID, like IESC22"
+					default=""
+					>
+				</field>
+				<field
+					name="lang"
+					type="text"
+					label="Language"
+					description="Which language should be used to translate the file names, like de or en"
+					default="de"
+					>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
