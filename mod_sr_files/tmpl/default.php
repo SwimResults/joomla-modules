@@ -13,13 +13,17 @@ defined('_JEXEC') or die;
 <?php
 	$meeting = $params->get('meeting');
 	$lang = $params->get('lang');
+
+    T::init($lang);
+
+    T::e("TEST.EXAMPLE");
 ?>
 
-<form action="<?php echo($download_url); ?>" method="get" target="_blank">
+
 <div class="file-list">
 <?php
 
-    $files = mysqli_query($db, "SELECT e.extension, e.color, e.icon, f.id, f.name, f.path, f.downloads, f.active FROM files f JOIN file_extensions e ON e.id = f.fk_extension_id WHERE f.fk_meeting_edition_id = $current_meeting AND f.visible = 1 ORDER BY f.ordering");
+    $files = SrFiles::getFileListByMeeting($meeting);
     foreach ($files as $file) {
         echo('<div class="file-tile');
         if (!$file["active"]) echo(' file-inactive');

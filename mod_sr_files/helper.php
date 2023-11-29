@@ -14,7 +14,15 @@ defined('_JEXEC') or die;
  *
  * @since  1.0
  */
-class SteSrFiles
+class SrFiles
 {
-    public static getFileListByMeeting($meeting, )
+    private static string $API_URL = "https://api.swimresults.de/meeting/v1/";
+    public static function getFileListByMeeting($meeting) {
+        if (!self::$API_URL) return array();
+        $data = Api::get(self::$API_URL, "/file/meeting/list/".$meeting);
+        if ($data) {
+            return json_decode($data, true);
+        }
+        return array();
+    }
 }

@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die;
 
-JLoader::register('SteSrFiles', __DIR__ . '/helper.php');
+JLoader::register('SrFiles', __DIR__ . '/helper.php');
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
 
