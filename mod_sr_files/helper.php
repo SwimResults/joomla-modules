@@ -9,6 +9,9 @@
 
 defined('_JEXEC') or die;
 
+require_once("api.php");
+require_once("translate.php");
+
 /**
  * Helper for mod_sr_files
  *
@@ -21,7 +24,7 @@ class SrFiles
         if (!self::$API_URL) return array();
         $data = Api::get(self::$API_URL, "/file/meeting/list/".$meeting);
         if ($data) {
-            return json_decode($data, true);
+            return $data;
         }
         return array();
     }

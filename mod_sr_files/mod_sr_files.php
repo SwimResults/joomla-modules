@@ -10,6 +10,8 @@
 defined('_JEXEC') or die;
 
 JLoader::register('SrFiles', __DIR__ . '/helper.php');
+JLoader::register('Translate', __DIR__ . '/translate.php');
+JLoader::register('Api', __DIR__ . '/api.php');
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
 

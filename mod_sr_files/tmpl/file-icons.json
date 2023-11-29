@@ -1,0 +1,26 @@
+{
+  "dsv6": {
+    "icon": "file",
+    "color": "#0176bb"
+  },
+  "dsv7": {
+    "icon": "file",
+    "color": "#0176bb"
+  },
+  "pdf": {
+    "icon": "file-pdf",
+    "color": "#aa0a00"
+  },
+  "lxf": {
+    "icon": "file",
+    "color": "#5dc1f3"
+  },
+  "lef": {
+    "icon": "file",
+    "color": "#5dc1f3"
+  },
+  "zip": {
+    "icon": "file-archive",
+    "color": "#edc213"
+  }
+}

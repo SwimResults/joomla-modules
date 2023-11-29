@@ -13,6 +13,9 @@
 		<filename module="mod_sr_files">mod_sr_files.php</filename>
 		<folder>tmpl</folder>
 		<filename>helper.php</filename>
+		<filename>api.php</filename>
+		<filename>translate.php</filename>
+		<filename>tmpl/file-icons.json</filename>
 	</files>
 	<config>
 		<fields name="params">

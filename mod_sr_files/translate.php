@@ -1,8 +1,8 @@
 <?php
 
-class T {
-    private static mixed $translation_data;
-    private static mixed $fallback_data;
+class Translate {
+    private static array $translation_data;
+    private static array $fallback_data;
 
     private static string $TRANSLATION_PATH = "https://app.swimresults.de/assets/i18n/";
 
