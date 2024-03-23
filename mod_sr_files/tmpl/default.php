@@ -57,7 +57,7 @@ error_reporting(E_ALL);
     $files = SrFiles::getFileListByMeeting($meeting);
     foreach ($files as $file) {
         if (isset($file["hidden"]) && $file["hidden"]) continue;
-        if (!isset($file["url"]) && !isset($file["path"])) continue;
+        if (!isset($file["url"]) && !isset($file["path"])) $file["path"] = "";
         if (!isset($file["existing"])) $file["existing"] = false;
         echo('<div class="file-tile');
         if (!$file["existing"]) echo(' file-inactive');
